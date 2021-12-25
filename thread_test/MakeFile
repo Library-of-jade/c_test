@@ -1,0 +1,11 @@
+CC = g++
+GFLAGS = -o
+OBJS = main.o
+TARGET = test
+
+$(TARGET): $(OBJS)
+	$(CC) $(GFLAGS) $(TARGET) $(OBJS)
+
+main.o : main.cpp
+	$(CC) -c main.cpp -pthread
+
